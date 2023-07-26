@@ -1,11 +1,12 @@
+import { NextUIProvider } from '@nextui-org/react';
+
 function App() {
-
-
   return (
-    <>
-      <h1>React Typescript</h1>
-    </>
-  )
+    <NextUIProvider>
+      <p>ts</p>
+
+    </NextUIProvider>
+  );
 }
 
 export default App
