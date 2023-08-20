@@ -1,8 +1,10 @@
 import { Navbar, Text, Loading } from "@nextui-org/react";
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [LoadingColor, setLoadingColor] = useState("secondary");
+  const location = useLocation();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,6 +15,7 @@ function NavBar() {
     return () => clearInterval(interval);
   }, []);
 
+  
   return (
     <>
       <Navbar isBordered variant={"static"}>
@@ -22,12 +25,12 @@ function NavBar() {
           </Text>
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
-          <Navbar.Link isActive href="#">
+          <Navbar.Link  as={Link} to="/" isActive={location.pathname === "/" ? "true" : ""}>
             Home
           </Navbar.Link>
-          <Navbar.Link href="#">Profil</Navbar.Link>
-          <Navbar.Link href="#">Projects</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
+          <Navbar.Link as={Link} to="/profil" isActive={location.pathname === "/profil" ? "true" : ""}>Profil</Navbar.Link>
+          <Navbar.Link as={Link} to="/projects" isActive={location.pathname === "/projects" ? "true" : ""}>Projects</Navbar.Link>
+          <Navbar.Link as={Link} to="/contact" isActive={location.pathname === "/contact" ? "true" : ""}>Contact</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Loading type="gradient" color={LoadingColor}  />
