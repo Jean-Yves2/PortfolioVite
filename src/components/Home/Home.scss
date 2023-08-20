@@ -11,17 +11,17 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
-        border: solid 1px rgb(159, 60, 60);
+        //border: solid 1px rgb(159, 60, 60);
         width: 73%;
         flex-grow: 1;
 
         &__description{
             width: 50%;
-            border: solid 1px rgb(55, 154, 54);
+            //border: solid 1px rgb(55, 154, 54);
         }
         &__card{
             width: 50%;
-            border: solid 1px rgb(62, 53, 191);
+            //border: solid 1px rgb(62, 53, 191);
             display: flex;
             align-items: center;
             justify-content: center;
