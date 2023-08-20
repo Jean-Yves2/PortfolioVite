@@ -1,11 +1,12 @@
+import { NextUIProvider } from '@nextui-org/react';
+import NavBar from './components/NavBar/NavBar';
+
 function App() {
-
-
   return (
-    <>
-      <h1>React Typescript</h1>
-    </>
-  )
+    <NextUIProvider>
+      <NavBar />
+    </NextUIProvider>
+  );
 }
 
 export default App
