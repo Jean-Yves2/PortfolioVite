@@ -1,10 +1,10 @@
 import "./Projets.scss";
 
 const projectsList = [
-  { name: "Opoll", date: "2021" },
-  { name: "TERRA", date: "2022" },
-  { name: "Opo", date: "2010" },
-  { name: "weather", date: "2020" }
+  { name: "Opoll", date: "2023" },
+  { name: "RainCheck", date: "2023" },
+  { name: "FilmCollection", date: "2023" },
+  { name: "Pong", date: "2021" }
 ];
 
 function Projets() {

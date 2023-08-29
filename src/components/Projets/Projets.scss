@@ -26,7 +26,6 @@
     }
     .work-content {
       position: relative;
-      background-image: url("src/assets/Opoll.png");
       background-size: cover;
       background-position: center;
       width: 50%;
@@ -54,8 +53,7 @@
       content: attr(data-project-name);
       position: absolute;
       bottom: -30px;
-      left: 15%;
-      transform: translateX(-50%);
+      left: 0;
       height: auto;
       width: auto;
       transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Ajout de la transition d'opacité */
@@ -113,7 +111,6 @@
     }
     .work-content {
       position: relative;
-      background-image: url("src/assets/Opoll.png");
       background-size: cover;
       background-position: center;
       width: 50%;
@@ -141,8 +138,7 @@
       content: attr(data-project-name);
       position: absolute;
       bottom: -30px;
-      left: 15%;
-      transform: translateX(-50%);
+      left: 0;
       height: auto;
       width: auto;
       transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; 
