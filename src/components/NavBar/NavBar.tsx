@@ -29,7 +29,7 @@ function NavBar() {
             Home
           </Navbar.Link>
           <Navbar.Link as={Link} to="/profil" isActive={location.pathname === "/profil" ? "true" : ""}>Profil</Navbar.Link>
-          <Navbar.Link as={Link} to="/projects" isActive={location.pathname === "/projects" ? "true" : ""}>Projects</Navbar.Link>
+          <Navbar.Link as={Link} to="/projets" isActive={location.pathname === "/projets" ? "true" : ""}>Projets</Navbar.Link>
           <Navbar.Link as={Link} to="/contact" isActive={location.pathname === "/contact" ? "true" : ""}>Contact</Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
