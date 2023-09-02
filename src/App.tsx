@@ -12,16 +12,15 @@ function App() {
   return (
     <NextUIProvider>
       <Router>
-        <div className="containerAll">
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projets" element={<Projets />} />
-
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
+      <div className="containerAll">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projets" element={<Projets />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
     </NextUIProvider>
   );
 }

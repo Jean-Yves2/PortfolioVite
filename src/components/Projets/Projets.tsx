@@ -1,3 +1,4 @@
+import Particle from "../Particle/Particle";
 import "./Projets.scss";
 
 const projectsList = [
@@ -10,6 +11,7 @@ const projectsList = [
 function Projets() {
   return (
     <div className="projetsContainer">
+      <Particle></Particle>
       <h1>Mes Projets</h1>
       <div className="work-container">
         {projectsList.map((project, index) => (

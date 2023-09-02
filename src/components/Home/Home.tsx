@@ -1,9 +1,10 @@
 import { Card } from "@nextui-org/react";
 import "./Home.scss";
-
+import Particle from "../Particle/Particle";
 function Home() {
   return (
     <div className="homeContainer">
+      <Particle></Particle>
       <div className="sectionContainer">
         <section className="sectionContainer__description">
           <h1>Developpeur FullStack</h1>
