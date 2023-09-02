@@ -1,0 +1,186 @@
+.projetsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  row-gap: 100px;
+  .work-right {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 80%;
+    span {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+    }
+    .work-content {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      width: 50%;
+      height: 100%;
+      filter: grayscale(90%);
+      transition: filter 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .work-title {
+      position: absolute;
+      top: 70%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      width: 40%;
+      height: 60px;
+      color: aliceblue;
+      overflow: hidden;
+    }
+
+    .work-title::before {
+      content: attr(data-project-name);
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      height: auto;
+      width: auto;
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Ajout de la transition d'opacité */
+      opacity: 0;
+    }
+
+    .work-date {
+      position: absolute;
+      top: 80%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      width: 40%;
+      height: 60px;
+      color: aliceblue;
+      overflow: hidden;
+    }
+
+    .work-date::before {
+      content: attr(data-project-date);
+      position: absolute;
+      bottom: -30px;
+      left: 15%;
+      transform: translateX(-50%);
+      height: auto;
+      width: auto;
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Ajout de la transition d'opacité */
+      opacity: 0;
+    }
+    .work-content:hover {
+      filter: none;
+    }
+
+    .work-content:hover .work-title::before {
+      bottom: 0;
+      opacity: 1;
+    }
+    .work-content:hover .work-date::before {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  .work-left {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 500px;
+    width: 80%;
+    span {
+      display: flex;
+      justify-content: flex-start;
+      width: 50%;
+    }
+    .work-content {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      width: 50%;
+      height: 100%;
+      filter: grayscale(90%);
+      transition: filter 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    .work-title {
+      position: absolute;
+      top: 70%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      width: 40%;
+      height: 60px;
+      color: aliceblue;
+      overflow: hidden;
+    }
+
+    .work-title::before {
+      content: attr(data-project-name);
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      height: auto;
+      width: auto;
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+      opacity: 0;
+    }
+
+    .work-date {
+      position: absolute;
+      top: 80%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      width: 40%;
+      height: 60px;
+      color: aliceblue;
+      overflow: hidden;
+    }
+
+    .work-date::before {
+      content: attr(data-project-date);
+      position: absolute;
+      bottom: -30px;
+      left: 15%;
+      transform: translateX(-50%);
+      height: auto;
+      width: auto;
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+      opacity: 0;
+    }
+    .work-content:hover {
+      filter: none;
+    }
+
+    .work-content:hover .work-title::before {
+      bottom: 0;
+      opacity: 1;
+    }
+    .work-content:hover .work-date::before {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
