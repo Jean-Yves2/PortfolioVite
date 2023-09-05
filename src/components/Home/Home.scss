@@ -16,9 +16,21 @@
     justify-content: center;
     width: 73%;
     flex-grow: 1;
+    row-gap: 30px;
 
     &__description {
       width: 50%;
+      &--title {
+        font-size: 2em;
+        font-weight: 600;
+        font-family: "Times New Roman", Times, serif;
+      }
+      &--text {
+        font-size: 1.5em;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+        line-height: 1.5em;
+      }
     }
     &__card {
       width: 50%;
@@ -38,6 +50,9 @@
         padding: 10px;
         border-radius: 5px;
         &-projet {
+          font-family: "Times New Roman", Times, serif;
+          font-size: 4em;
+          line-height: 1em;
           background: linear-gradient(
             215deg,
             rgba(24, 237, 109, 1) 0%,
@@ -46,6 +61,50 @@
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &__selectedProject {
+      &__article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 20px;
+        &--description {
+          width: 50%;
+          color: #fff;
+          backdrop-filter: blur(2px);
+          h2 {
+            font-family: "eloc";
+          }
+          p {
+            font-family: "Lato", sans-serif;
+          }
+        }
+        &--image {
+          width: 50%;
+          position: relative;
+          height: 300px;
+          overflow: hidden;
+          .img {
+            position: absolute;
+            width: 100%; 
+            height: 100%;
+            object-fit: cover; 
+            object-position: center;
+            overflow: hidden;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: rgb(255, 255, 255);
         }
       }
     }
