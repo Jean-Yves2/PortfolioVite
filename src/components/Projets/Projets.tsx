@@ -20,7 +20,7 @@ function Projets() {
             className={index % 2 === 0 ? "work-right" : "work-left"}
           >
             <span>{index+1}/{projectsList.length}</span>
-            <div className="work-content" style={{ backgroundImage: `url(src/assets/${project.name}.png)` }}>
+            <div className="work-content" style={{ backgroundImage: `url(./${project.name}.png)` }}>
               <div className="work-title" data-project-name={project.name}></div>
               <div className="work-date" data-project-date={project.date}></div>
             </div>

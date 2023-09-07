@@ -82,7 +82,7 @@ function Home() {
           <section className="sectionContainer__profil__card">
             <Card css={{ w: "80%" }}>
               <Card.Image
-                src="src\assets\me.jpg"
+                src="./Jean-Yves.jpg"
                 objectFit="cover"
                 alt="Card image background"
               />
@@ -110,7 +110,7 @@ function Home() {
               </section>
               <section className="sectionContainer__selectedProject__article--image">
                 <img
-                  src={`src/assets/${project.name}.png`}
+                  src={`./${project.name}.png`}
                   alt={`${project.name} Project`}
                 />
               </section>
