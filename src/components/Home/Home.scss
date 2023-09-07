@@ -17,27 +17,44 @@
     width: 73%;
     flex-grow: 1;
     row-gap: 30px;
-
-    &__description {
-      width: 50%;
-      &--title {
-        font-size: 2em;
-        font-weight: 600;
-        font-family: "Times New Roman", Times, serif;
-      }
-      &--text {
-        font-size: 1.5em;
-        font-weight: 400;
-        font-family: "Lato", sans-serif;
-        line-height: 1.5em;
-      }
-    }
-    &__card {
-      width: 50%;
+    &__profil {
       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      width: 100%;
+      height: 70vh;
+
+      &__description {
+        width: 60%;
+        .profil__name {
+          color: #fff;
+        }
+        &__card {
+          background-color: #fff;
+          border-radius: 5px;
+          &--title {
+            font-size: 2em;
+            font-weight: 600;
+            font-family: "Times New Roman", Times, serif;
+          }
+          &--text {
+            font-size: 1.5em;
+            font-weight: 400;
+            font-family: "Lato", sans-serif;
+            line-height: 1.5em;
+          }
+        }
+      }
+      &__card {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
+
     &__projectSection {
       display: flex;
       align-items: center;
@@ -81,6 +98,7 @@
           }
           p {
             font-family: "Lato", sans-serif;
+            font-weight: bold;
           }
         }
         &--image {
@@ -90,9 +108,9 @@
           overflow: hidden;
           .img {
             position: absolute;
-            width: 100%; 
+            width: 100%;
             height: 100%;
-            object-fit: cover; 
+            object-fit: cover;
             object-position: center;
             overflow: hidden;
           }
@@ -105,6 +123,29 @@
           width: 100%;
           height: 2px;
           background-color: rgb(255, 255, 255);
+        }
+      }
+    }
+    &__contact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      padding: 20px;
+      &__card {
+        background-color: #fff;
+        border-radius: 5px;
+
+        &--logo,
+        &--title,
+        &--description {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          height: 80px;
+          width: 200px;
         }
       }
     }
