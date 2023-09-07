@@ -1,31 +1,160 @@
-.homeContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    border: solid 1px rgb(233, 233, 233);
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border: solid 1px rgb(233, 233, 233);
+  z-index: 1;
+  row-gap: 5em;
 
-    .sectionContainer{
+  .sectionContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    width: 73%;
+    flex-grow: 1;
+    row-gap: 30px;
+    &__profil {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 70vh;
+
+      &__description {
+        width: 60%;
+        .profil__name {
+          color: #fff;
+        }
+        &__card {
+          background-color: #fff;
+          border-radius: 5px;
+          padding: 10px;
+          &--title {
+            font-size: 2em;
+            font-weight: 600;
+            font-family: "Times New Roman", Times, serif;
+          }
+          &--text {
+            font-size: 1.5em;
+            font-weight: 400;
+            font-family: "Lato", sans-serif;
+            line-height: 1.5em;
+          }
+        }
+      }
+      &__card {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__projectSection {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      &__white {
+        background-color: rgba(240, 240, 240, 0.165);
+        backdrop-filter: blur(1px);
+        border: 1px solid #fff;
+        padding: 10px;
+        border-radius: 5px;
+        &-projet {
+          font-family: "Times New Roman", Times, serif;
+          font-size: 4em;
+          line-height: 1em;
+          background: linear-gradient(
+            215deg,
+            rgba(24, 237, 109, 1) 0%,
+            rgba(120, 14, 205, 1) 43%,
+            rgba(218, 0, 255, 1) 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    &__selectedProject {
+      &__article {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
-        //border: solid 1px rgb(159, 60, 60);
-        width: 73%;
-        flex-grow: 1;
-
-        &__description{
-            width: 50%;
-            //border: solid 1px rgb(55, 154, 54);
+        position: relative;
+        padding: 20px;
+        &--description {
+          width: 50%;
+          color: #fff;
+          backdrop-filter: blur(2px);
+          h2 {
+            font-family: "eloc";
+          }
+          p {
+            font-family: "Lato", sans-serif;
+            font-weight: bold;
+          }
         }
-        &__card{
-            width: 50%;
-            //border: solid 1px rgb(62, 53, 191);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        &--image {
+          width: 50%;
+          position: relative;
+          height: 300px;
+          overflow: hidden;
+          .img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            overflow: hidden;
+          }
         }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: rgb(255, 255, 255);
+        }
+      }
     }
-}
+    &__contact {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      padding: 20px;
+      &__card {
+        background-color: #fff;
+        border-radius: 5px;
 
+        &--logo,
+        &--title,
+        &--description {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          height: 80px;
+          width: 250px;
+
+          a, p{
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.5em;
+            line-height: 1em;
+          }
+        }
+      }
+    }
+  }
+}

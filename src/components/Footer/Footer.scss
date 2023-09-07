@@ -1,5 +1,11 @@
-.textFooter{
+footer {
+  z-index: 1;
+  .textFooter {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    line-height: 1em;
+  }
 }
