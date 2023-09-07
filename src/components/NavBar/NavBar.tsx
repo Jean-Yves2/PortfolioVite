@@ -21,16 +21,14 @@ function NavBar() {
       <Navbar isBordered variant={"static"}>
         <Navbar.Brand>
           <Text b color="inherit">
-            J-Y
+          <h3>J-Y</h3>
           </Text>
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
           <Navbar.Link  as={Link} to="/" isActive={location.pathname === "/" ? "true" : ""}>
-            Home
+          <h3>Home</h3>
           </Navbar.Link>
-          <Navbar.Link as={Link} to="/profil" isActive={location.pathname === "/profil" ? "true" : ""}>Profil</Navbar.Link>
-          <Navbar.Link as={Link} to="/projets" isActive={location.pathname === "/projets" ? "true" : ""}>Projets</Navbar.Link>
-          <Navbar.Link as={Link} to="/contact" isActive={location.pathname === "/contact" ? "true" : ""}>Contact</Navbar.Link>
+          <Navbar.Link as={Link} to="/projets" isActive={location.pathname === "/projets" ? "true" : ""}><h3>Projets</h3></Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Loading type="gradient" color={LoadingColor}  />
