@@ -131,7 +131,7 @@ function Home() {
                 className="sectionContainer__contact__card--logo"
                 key={index}
               >
-                <img src={`src/assets/${contact.logo}.svg`} alt="" />
+                <img src={`./${contact.logo}.svg`} alt="" />
               </section>
               <section className="sectionContainer__contact__card--title">
                 <h3>{contact.title}</h3>
