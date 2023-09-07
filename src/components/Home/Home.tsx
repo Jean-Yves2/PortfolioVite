@@ -61,7 +61,8 @@ function Home() {
             <section className="sectionContainer__profil__description__card" >
               <h2 className="sectionContainer__profil__description__card--title">Developpeur FullStack Js </h2>
               <div className="sectionContainer__profil__description__card--text">
-                  Bonjour à tous ! Je suis un développeur Full Stack JS
+                  Bonjour à tous ! <br />
+                  Je suis un développeur Full Stack JS
                   spécialisé dans le développement web et mobile . En tant que
                   développeur Full Stack, je suis à l'aise à la fois en frontend
                   et en backend. Je suis capable de concevoir des interfaces

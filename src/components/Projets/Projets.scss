@@ -1,10 +1,17 @@
-.projetsContainer{
+.projetsContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
   z-index: 1;
+  padding-bottom: 15px;
+  h1 {
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 4em;
+    line-height: 1em;
+  }
 }
 
 .work-container {
@@ -24,6 +31,10 @@
       display: flex;
       justify-content: flex-end;
       width: 50%;
+      color: #fff;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 4em;
+      line-height: 1em;
     }
     .work-content {
       position: relative;
@@ -109,6 +120,10 @@
       display: flex;
       justify-content: flex-start;
       width: 50%;
+      color: #fff;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 4em;
+      line-height: 1em;
     }
     .work-content {
       position: relative;
@@ -142,7 +157,7 @@
       left: 0;
       height: auto;
       width: auto;
-      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
       opacity: 0;
     }
 
@@ -168,7 +183,7 @@
       transform: translateX(-50%);
       height: auto;
       width: auto;
-      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
       opacity: 0;
     }
     .work-content:hover {

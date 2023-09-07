@@ -34,6 +34,7 @@
         &__card {
           background-color: #fff;
           border-radius: 5px;
+          padding: 10px;
           &--title {
             font-size: 2em;
             font-weight: 600;
@@ -145,7 +146,13 @@
           justify-content: center;
           align-items: center;
           height: 80px;
-          width: 200px;
+          width: 250px;
+
+          a, p{
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.5em;
+            line-height: 1em;
+          }
         }
       }
     }
