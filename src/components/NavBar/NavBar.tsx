@@ -26,9 +26,8 @@ function NavBar() {
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
           <Navbar.Link  as={Link} to="/" isActive={location.pathname === "/" ? "true" : ""}>
-          <h3>Home</h3>
+          <h3>Accueil</h3>
           </Navbar.Link>
-          <Navbar.Link as={Link} to="/projets" isActive={location.pathname === "/projets" ? "true" : ""}><h3>Projets</h3></Navbar.Link>
         </Navbar.Content>
         <Navbar.Content>
           <Loading type="gradient" color={LoadingColor}  />
