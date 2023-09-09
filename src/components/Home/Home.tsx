@@ -1,6 +1,7 @@
-import { Card } from "@nextui-org/react";
 import "./Home.scss";
 import Particle from "../Particle/Particle";
+import { useState } from "react";
+import { Button } from "@nextui-org/react";
 function Home() {
   const projectsList = [
     {
@@ -43,13 +44,14 @@ function Home() {
       isLink: true,
       link: "https://www.linkedin.com/in/jean-yves-saraka/",
     },
-    {
-      logo: "bx-map-pin",
-      title: "Adresse",
-      description: "Saint-Cloud , FRANCE",
-      isLink: false,
-    },
   ];
+
+  const [allOnMe, setallOnMe] = useState(true);
+  const [catchphrase, setCatchphrase] = useState(false);
+  const handleButtonCLick = () => {
+    setallOnMe(!allOnMe);
+    setCatchphrase(!catchphrase);
+  };
 
   return (
     <div className="homeContainer">
@@ -57,36 +59,66 @@ function Home() {
       <div className="sectionContainer">
         <div className="sectionContainer__profil">
           <section className="sectionContainer__profil__description">
-            <h1 className="profil__name">SARAKA JEAN-YVES</h1>
-            <section className="sectionContainer__profil__description__card" >
-              <h2 className="sectionContainer__profil__description__card--title">Developpeur FullStack Js </h2>
+            <h1 className="sectionContainer__profil__description__name">
+              SARAKA JEAN-YVES
+            </h1>
+            <section className="sectionContainer__profil__description__card">
+              <h2 className="sectionContainer__profil__description__card--title">
+                Developpeur FullStack Js{" "}
+              </h2>
               <div className="sectionContainer__profil__description__card--text">
-                  Bonjour à tous ! <br />
-                  Je suis un développeur Full Stack JS
-                  spécialisé dans le développement web et mobile . En tant que
-                  développeur Full Stack, je suis à l'aise à la fois en frontend
-                  et en backend. Je suis capable de concevoir des interfaces
-                  utilisateur réactives et intuitives en utilisant des
-                  frameworks tels que React et Vue.js. De plus, je maîtrise
-                  également les langages de programmation côté serveur tels que
-                  Node.js, ce qui me permet de développer des API robustes et
-                  des services backend performants. Constamment à l'affût des
-                  dernières tendances et des meilleures pratiques. Je suis
-                  toujours prêt à relever de nouveaux défis et à apprendre de
-                  nouvelles technologies pour améliorer mes compétences.Ma
-                  passion pour le développement web et mobile ne se limite pas à
-                  une seule plateforme ,ni a un language.Car avant d'être un
-                  développeur JS, je suis un développeur.</div>
+                <p
+                  className="sectionContainer__profil__description__card--text--catchphrase"
+                  style={{ display: catchphrase ? "none" : "inline" }}
+                >
+                  Bienvenue sur mon portefolio ! <br />
+                  Explorez le monde du développement Full Stack JS avec moi, où
+                  la créativité rencontre la technologie pour donner vie à des
+                  expériences numériques extraordinaires. <br />{" "}
+                </p>
+
+                <div
+                  className="sectionContainer__profil__description__card--text--more"
+                  style={{
+                    height: allOnMe ? "0px" : "100%",
+                    overflow: "hidden",
+                  }}
+                >
+                  <p
+                    className="sectionContainer__profil__description__card--text--more--description"
+                    style={{ display: allOnMe ? "none" : "inline" }}
+                  >
+                    Je suis un développeur Full Stack JS passionné par la
+                    création d'expériences web et mobile exceptionnelles. Mon
+                    expertise s'étend à tous les aspects du développement, que
+                    ce soit côté frontend ou backend. Je suis un créateur
+                    d'interfaces utilisateur réactives et intuitives grâce à des
+                    frameworks tels que React et Vue.js, tout en ayant une
+                    solide maîtrise des langages serveur comme Node.js pour
+                    concevoir des API robustes et des services backend
+                    performants. Ma quête perpétuelle de perfectionnement
+                    m'amène à rester constamment à l'affût des dernières
+                    tendances et des meilleures pratiques de l'industrie. Je
+                    suis toujours prêt à relever de nouveaux défis et à plonger
+                    dans de nouvelles technologies pour affiner mes compétences
+                    et offrir des solutions innovantes. Mais ce qui distingue
+                    véritablement ma passion pour le développement, c'est
+                    qu'elle ne se limite pas à une plateforme ou à un langage
+                    particulier. Avant d'être un développeur JS, je suis un
+                    développeur tout court, avide de découvertes et de
+                    réalisations dans le monde en constante évolution de la
+                    technologie.
+                  </p>
+                </div>
+              </div>
+
+              <Button  color="gradient" auto onClick={handleButtonCLick}>
+                {allOnMe ? "Qui Suis Je 🕵" : "Réduire 💡"}
+              </Button>
             </section>
           </section>
           <section className="sectionContainer__profil__card">
-            <Card css={{ w: "80%" }}>
-              <Card.Image
-                src="./Jean-Yves.jpg"
-                objectFit="cover"
-                alt="Card image background"
-              />
-            </Card>
+            <img src="./Jean-Yves.jpg" alt="Jean-Yves.jpg" />
           </section>
         </div>
 
