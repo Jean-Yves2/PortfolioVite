@@ -90,15 +90,17 @@
         padding: 10px;
         border-radius: 5px;
         &-projet {
-          font-family: "Times New Roman", Times, serif;
-          font-size: 4em;
-          line-height: 1em;
-          background: linear-gradient(
+          font-size: 3em;
+          font-weight: 400;
+          font-family: "Lato", sans-serif;
+          line-height: 1.5em;
+          /*background: linear-gradient(
             215deg,
             rgba(24, 237, 109, 1) 0%,
             rgba(120, 14, 205, 1) 43%,
             rgba(218, 0, 255, 1) 100%
-          );
+          );*/
+          background-color: #fff;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -170,6 +172,7 @@
           align-items: center;
           height: 80px;
           width: 100%;
+          padding: 2px;
 
           a,
           p {
