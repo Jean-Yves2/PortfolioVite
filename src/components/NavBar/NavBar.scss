@@ -1,15 +1,15 @@
-.navBar{
-    display: flex;
-    color: white;
-    width: 100%;
-    height: 50px;
-    background-color: #1d1d1d;
-    z-index: 2;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+.navBar {
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 50px;
+  background-color: #1d1d1d;
+  z-index: 2;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 
-   &__anchor{
+  &__anchor {
     width: 60%;
     display: flex;
     flex-wrap: wrap;
@@ -19,12 +19,37 @@
     flex-direction: row;
     height: 100%;
     color: white;
-    a{
-        color: white;
-        text-decoration: none;
-        font-family: "Lato", sans-serif;
-        font-size: 1.5em;
-        line-height: 1em;
+    a {
+      color: white;
+      text-decoration: none;
+      font-family: "Lato", sans-serif;
+      font-size: 1.5em;
+      line-height: 1em;
     }
-   }
+    a:hover {
+      color: #276CEF;
+    }
+  }
+  &--menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .navBar {
+    &__anchor {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navBar {
+    &__anchor {
+      display: none;
+    }
+    &--menu {
+      display: unset;
+    }
+  }
 }

@@ -170,10 +170,10 @@ function Home() {
         </div>
         <div className="sectionContainer__contact">
           {contactList.map((contact, index) => (
-            <div className="sectionContainer__contact__card">
+            <div className="sectionContainer__contact__card" key={index}>
               <section
                 className="sectionContainer__contact__card--logo"
-                key={index}
+                
               >
                 <img src={`./${contact.logo}.svg`} alt="" />
               </section>
