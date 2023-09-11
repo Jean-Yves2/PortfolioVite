@@ -1,39 +1,49 @@
-import { Navbar, Text, Loading } from "@nextui-org/react";
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-
+import React from "react";
+import "./NavBar.scss";
+import { Modal, Button } from "@nextui-org/react";
 function NavBar() {
-  const [LoadingColor, setLoadingColor] = useState("secondary");
-  const location = useLocation();
+  const [visible, setVisible] = React.useState(false);
+  const handler = () => {setVisible(true)
+  console.log(visible)};
+  const closeHandler = () => {
+    setVisible(false);
+    console.log(visible)
+  };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLoadingColor((LoadingColor) => {
-        return LoadingColor === "secondary" ? "error" : "secondary";
-      });
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
-  
   return (
-    <>
-      <Navbar isBordered variant={"static"}>
-        <Navbar.Brand>
-          <Text b color="inherit">
-          <h3>J-Y</h3>
-          </Text>
-        </Navbar.Brand>
-        <Navbar.Content hideIn="xs">
-          <Navbar.Link  as={Link} to="/" isActive={location.pathname === "/" ? "true" : ""}>
-          <h3>Accueil</h3>
-          </Navbar.Link>
-        </Navbar.Content>
-        <Navbar.Content>
-          <Loading type="gradient" color={LoadingColor}  />
-        </Navbar.Content>
-      </Navbar>
-    </>
+    <div className="navBar">
+      <div className="navBar__anchor">
+        <a href="#">Profil</a>
+        <a href="#sectionContainer__projectSection__white-projet--experience">
+          Expériences
+        </a>
+        <a href="#sectionContainer__projectSection__white-projet--contact">
+          Contact
+        </a>
+      </div>
+      <div className="navBar--menu" >
+        <Button auto onPress={handler}>
+          <img src={`./bx-menu.svg`} alt={`Menu`} />
+        </Button>
+        <Modal
+          closeButton
+          blur
+          aria-labelledby="modal-title"
+          open={visible}
+          onClose={closeHandler}
+        >
+          <Modal.Body>
+            <a href="#" onClick={closeHandler}>Profil</a>
+            <a href="#sectionContainer__projectSection__white-projet--experience" onClick={closeHandler}>
+              Expériences
+            </a>
+            <a href="#sectionContainer__projectSection__white-projet--contact" onClick={closeHandler}>
+              Contact
+            </a>
+          </Modal.Body>
+        </Modal>
+      </div>
+    </div>
   );
 }
 
