@@ -1,39 +1,16 @@
-import { Navbar, Text, Loading } from "@nextui-org/react";
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import "./NavBar.scss";
 
 function NavBar() {
-  const [LoadingColor, setLoadingColor] = useState("secondary");
-  const location = useLocation();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLoadingColor((LoadingColor) => {
-        return LoadingColor === "secondary" ? "error" : "secondary";
-      });
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
-  
   return (
-    <>
-      <Navbar isBordered variant={"static"}>
-        <Navbar.Brand>
-          <Text b color="inherit">
-          <h3>J-Y</h3>
-          </Text>
-        </Navbar.Brand>
-        <Navbar.Content hideIn="xs">
-          <Navbar.Link  as={Link} to="/" isActive={location.pathname === "/" ? "true" : ""}>
-          <h3>Accueil</h3>
-          </Navbar.Link>
-        </Navbar.Content>
-        <Navbar.Content>
-          <Loading type="gradient" color={LoadingColor}  />
-        </Navbar.Content>
-      </Navbar>
-    </>
+    <div className="navBar" >
+      <div className="navBar__anchor">
+        <a href="#">Profil</a>
+        <a href="#sectionContainer__projectSection__white-projet--experience">Expériences</a>
+        <a href="#sectionContainer__projectSection__white-projet--contact">Contact</a>
+      </div>
+    </div>
   );
 }
 
