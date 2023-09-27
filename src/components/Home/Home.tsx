@@ -8,12 +8,14 @@ function Home() {
       name: "Opoll",
       date: "2023",
       techno: "REACT - MATERIEL UI - SOKET.IO - MARIADB - JWT",
+      link: "https://opoll.netlify.app/",
     },
-    { name: "RainCheck", date: "2023", techno: "JAVASCRIPT" },
+    { name: "RainCheck", date: "2023", techno: "JAVASCRIPT", link: "" },
     {
       name: "FilmCollection",
       date: "2023",
       techno: "NODEJS - EXPRESS - POSTGRESQL - EJS",
+      link: "https://movie-collection-a9f5561b93b0.herokuapp.com/",
     },
   ];
 
@@ -171,10 +173,7 @@ function Home() {
         <div className="sectionContainer__contact">
           {contactList.map((contact, index) => (
             <div className="sectionContainer__contact__card" key={index}>
-              <section
-                className="sectionContainer__contact__card--logo"
-                
-              >
+              <section className="sectionContainer__contact__card--logo">
                 <img src={`./${contact.logo}.svg`} alt="" />
               </section>
               <section className="sectionContainer__contact__card--title">
