@@ -10,7 +10,12 @@ function Home() {
       techno: "REACT - MATERIEL UI - SOKET.IO - MARIADB - JWT",
       link: "https://opoll.netlify.app/",
     },
-    { name: "RainCheck", date: "2023", techno: "JAVASCRIPT", link: "" },
+    {
+      name: "RainCheck",
+      date: "2023",
+      techno: "JAVASCRIPT",
+      link: "https://raincheck-app-3667a65f8069.herokuapp.com/",
+    },
     {
       name: "FilmCollection",
       date: "2023",
