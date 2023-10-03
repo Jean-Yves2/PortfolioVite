@@ -8,12 +8,19 @@ function Home() {
       name: "Opoll",
       date: "2023",
       techno: "REACT - MATERIEL UI - SOKET.IO - MARIADB - JWT",
+      link: "https://opoll.netlify.app/",
     },
-    { name: "RainCheck", date: "2023", techno: "JAVASCRIPT" },
+    {
+      name: "RainCheck",
+      date: "2023",
+      techno: "JAVASCRIPT",
+      link: "https://raincheck-app-3667a65f8069.herokuapp.com/",
+    },
     {
       name: "FilmCollection",
       date: "2023",
       techno: "NODEJS - EXPRESS - POSTGRESQL - EJS",
+      link: "https://movie-collection-a9f5561b93b0.herokuapp.com/",
     },
   ];
 
@@ -153,10 +160,12 @@ function Home() {
                 <p>{project.techno}</p>
               </section>
               <section className="sectionContainer__selectedProject__article--image">
-                <img
-                  src={`./${project.name}.png`}
-                  alt={`${project.name} Project`}
-                />
+                <a href={project.link}>
+                  <img
+                    src={`./${project.name}.png`}
+                    alt={`${project.name} Project`}
+                  />
+                </a>
               </section>
             </article>
           ))}
@@ -171,11 +180,8 @@ function Home() {
         <div className="sectionContainer__contact">
           {contactList.map((contact, index) => (
             <div className="sectionContainer__contact__card" key={index}>
-              <section
-                className="sectionContainer__contact__card--logo"
-                
-              >
-                <img src={`./${contact.logo}.svg`} alt="" />
+              <section className="sectionContainer__contact__card--logo">
+                <img src={`./${contact.logo}.svg`} alt={contact.title} />
               </section>
               <section className="sectionContainer__contact__card--title">
                 <h3>{contact.title}</h3>
