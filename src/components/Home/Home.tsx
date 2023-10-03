@@ -160,10 +160,12 @@ function Home() {
                 <p>{project.techno}</p>
               </section>
               <section className="sectionContainer__selectedProject__article--image">
-                <img
-                  src={`./${project.name}.png`}
-                  alt={`${project.name} Project`}
-                />
+                <a href={project.link}>
+                  <img
+                    src={`./${project.name}.png`}
+                    alt={`${project.name} Project`}
+                  />
+                </a>
               </section>
             </article>
           ))}
@@ -179,7 +181,7 @@ function Home() {
           {contactList.map((contact, index) => (
             <div className="sectionContainer__contact__card" key={index}>
               <section className="sectionContainer__contact__card--logo">
-                <img src={`./${contact.logo}.svg`} alt="" />
+                <img src={`./${contact.logo}.svg`} alt={contact.title} />
               </section>
               <section className="sectionContainer__contact__card--title">
                 <h3>{contact.title}</h3>
