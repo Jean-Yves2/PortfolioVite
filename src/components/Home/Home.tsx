@@ -7,14 +7,8 @@ function Home() {
     {
       name: "Opoll",
       date: "2023",
-      techno: "REACT - MATERIEL UI - SOKET.IO - MARIADB - JWT",
+      techno: "REACT JS - MATERIEL UI - SOKET.IO - MARIADB - JWT",
       link: "https://opoll.netlify.app/",
-    },
-    {
-      name: "RainCheck",
-      date: "2023",
-      techno: "JAVASCRIPT",
-      link: "https://raincheck-app-3667a65f8069.herokuapp.com/",
     },
     {
       name: "FilmCollection",
@@ -22,6 +16,18 @@ function Home() {
       techno: "NODEJS - EXPRESS - POSTGRESQL - EJS",
       link: "https://movie-collection-a9f5561b93b0.herokuapp.com/",
     },
+    {
+      name: "ImmoSunset",
+      date: "2023",
+      techno: "ANGULAR - TYPESCRIPT",
+      link: "https://jean-yves2.github.io/immosunset/",
+    },
+    {
+      name: "RainCheck",
+      date: "2023",
+      techno: "JAVASCRIPT",
+      link: "https://raincheck-app-3667a65f8069.herokuapp.com/",
+    }
   ];
 
   const contactList = [
